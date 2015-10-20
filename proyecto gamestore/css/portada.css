@@ -1,0 +1,65 @@
+@media screen {
+
+    main    {
+            margin: 0 auto;
+            width: 960px;
+            }
+
+    .cabecera   {
+                float: left;
+                }
+
+    nav#menu    {
+                float: left;
+                padding: 0;
+                }
+
+    nav#menu > ul > li  {
+                        float: left;
+                        }
+
+    header > a > *  {
+        float: left;
+        }
+
+    #login  {
+            float: right;
+            }
+
+    #autopromo  {
+                display: block;
+                }
+
+    h1  {
+        font-size: 6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        }
+
+    .cuerpo     {
+                float: left;
+                clear: both;
+                }
+
+    .pie        {
+                float: left;
+                clear: both;
+                }
+
+    .boton  {
+            width: 7em;
+            height: 2em;
+            background-color: #003c00;
+            color: #76b900;
+            border-color: #76b900;
+            border-radius: 8px;
+            text-align: center;
+            }
+
+
+    }
+
+@media handheld {
+
+    body {background-color: blue;}
+}
