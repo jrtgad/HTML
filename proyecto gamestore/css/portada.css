@@ -7,27 +7,48 @@
 
     .cabecera   {
                 float: left;
+                display: block;
+                margin: 0 auto;
                 }
+
+    #logo  {
+            float: left;
+            display: inline-block;
+            vertical-align: middle;
+            /*zoom: 1;  Fix for IE7
+            *display: inline;*/ /* Fix for IE7 */
+            }
+
+    #titulo {
+            text-align: center;
+            margin: 1.5em;
+            font-size: 5em;
+            }
+
+    #login  {
+            float: right;
+            display: inline-block;
+            vertical-align: middle;
+            zoom: 1; /* Fix for IE7 */
+            *display: inline; /* Fix for IE7 */
+            }
 
     nav#menu    {
                 float: left;
+                display: block;
                 padding: 0;
                 }
 
     nav#menu > ul > li  {
                         float: left;
+                        height: 25%;
+                        width: 25%;
                         }
-
-    header > a > *  {
-        float: left;
-        }
-
-    #login  {
-            float: right;
-            }
 
     #autopromo  {
                 display: block;
+                width: 100%;
+                height: 100%;
                 }
 
     h1  {
@@ -39,11 +60,24 @@
     .cuerpo     {
                 float: left;
                 clear: both;
+                display: block;
+                width: 100%;
+                height: 100%;
                 }
 
-    .pie        {
+    .cuerpo > ul > li   {
+                        width: 25%;
+                        height: 25%;
+                        display: inline-block;
+                        vertical-align: top;
+                        zoom: 1; /* Fix for IE7 */
+                        *display: inline; /* Fix for IE7 */
+                        }
+
+    footer      {
                 float: left;
                 clear: both;
+                display: block;
                 }
 
     .boton  {
