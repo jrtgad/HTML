@@ -3,6 +3,10 @@
         src: url("../fuentes/Zekton/zekton.ttf");
     }
 
+@border-radius {
+    border-radius: "normal";
+}
+
 @media screen {
 
     main    {
@@ -16,15 +20,21 @@
                 display: block;
                 margin: 0 auto;
                 margin-bottom: 1em;
+                margin-top: 1em;
                 width: 960px;
+                background-color: #003C00;
+                border-radius: 0.4em;
 }
 
     #logo  {
             float: left;
+            position: relative;
+            top: 0.2em;
+            left: 0.2em;
 }
 
     #titulo {
-            padding-left: 0.9em;
+            padding-left: 0.75em;
             font-size: 6em;
             display: inline-block;
 }
@@ -33,7 +43,6 @@
             float: right;
             display: inline-block;
             margin-top: 0.5em;
-            padding-left: 1.3em;
 }
 
     #user_img {
@@ -48,14 +57,15 @@
             float: left;
             display: inline-block;
             height: 2em;
-            background-color: #003c00;
-            color: #76b900;
-            border-color: #76b900;
-            border-radius: 8px;
+            background-color: #76b900;
+            color: #003c00;
+            border-color: #003c00;
+            border-radius: "radius";
             text-align: center;
             vertical-align: middle;
             margin-top: 10px;
             font-family: "zekton";
+            font-size: 0.82em;
     }
 
     #login > .boton + .boton {
@@ -63,10 +73,10 @@
     }
 
     li#menu_buscar > img {
-        width: 1em;
+        width: 0.7em;
         position: relative;
-        left: 4em;
-        top: -1.4em;
+        left: -1.05em;
+        top: 0.15em;
         cursor: pointer;
         /*box-shadow: 1px 1px gray;*/
 }
@@ -75,8 +85,11 @@
                 float: left;
                 display: table;
                 width: 960px;
-                padding-top: 0.5em;
-                background-color: #003C00;                
+                background-color: #003C00;
+                font-size: 1.5em;
+                border-radius: 0.2em;
+                padding-top: 0.1em;
+                padding-bottom: 0.4em;
 }
 
     nav#menu > ul > li  {
@@ -92,9 +105,12 @@
         vertical-align: middle;
     }
     
+    li#menu_buscar {
+    }
+    
     li#menu_buscar > input {
-                 margin: 0.3em;
-                 border-bottom-left-radius: 
+                 height: : 0.3em;
+                 border-radius: 0.4em;
     }
 
     #autopromo  {
