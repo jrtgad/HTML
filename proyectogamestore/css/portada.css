@@ -1,0 +1,199 @@
+@media screen {
+    
+    body {
+        background-color: #363636;
+    }
+    
+    main    {
+           margin: 0 auto;
+           width: 950px;
+           font-family: "zekton";            
+    }
+    
+    .cabecera   {
+            float: left;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 1em;
+            margin-top: 1em;
+            width: 960px;
+            height: 115px;
+            background: rgb(0,60,0);
+            background: linear-gradient(to right, rgb(0,60,0) 0%, rgb(0,60,0) 35%, rgb(0,0,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='.003c00', endColorstr='.000000', GradientType=1 );
+            border-radius: 0.4em;
+    }
+
+    .logo  {
+        float: left;
+        position: relative;
+        top: 0.2em;
+        left: 1em;
+    }
+
+    .titulo {
+        padding-left: 0.75em;
+        font-size: 6em;
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+    .titulo2 {
+        font-size: 6em;
+        color: white;
+    }
+
+    .login  {
+        float: right;
+        position: relative;
+        left: 3em;
+        margin-top: 0.5em;
+    }
+
+    .user_img {
+            width: 5em;
+            margin-right: 0.3em;
+            margin-left: 0.3em;
+            float: left;
+    }
+
+    .login > .boton {
+            width: 50%;
+            float: left;
+            display: block;
+            height: 2em;
+            background-color: #76b900;
+            color: #003c00;
+            border-color: #003c00;
+            text-align: center;
+            margin-top: 10px;
+            font-family: "zekton";
+            font-size: 1em;
+            border-radius: 0.4em;
+    }
+
+    .login > .boton + .boton {
+        margin-top: 0.2em;
+    }
+
+    li.menu_buscar > img {
+        width: 0.7em;
+        position: relative;
+        left: 2.8em;
+        top: -1em;
+        cursor: pointer;
+        /*box-shadow: 1px 1px gray;*/
+    }
+
+    nav.menu    {
+                float: left;
+                display: block;
+                width: 960px;
+                height: 1.8em;
+                background-color: #003C00;
+                font-size: 1.5em;
+                border-radius: 0.2em;
+    }
+
+    nav.menu > ul > li  {
+                    float: left;
+                    width: 18%;
+                    margin-left: 18px;
+                    text-align: center;
+                    padding-top: 0.2em;
+    }
+    
+    nav.menu > ul > li > a {
+        vertical-align: middle;
+    }
+    
+    li.menu_buscar > input {
+             height: 1.2em;
+             vertical-align: middle; 
+             border-radius: 0.4em;
+    }
+
+    .autopromo  {
+             display: block;
+             padding: 0;
+             margin-top: 1em;
+             width: 960px;
+             height: 20em;
+             text-align: center;
+    }
+    
+    .autopromo > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    h1  {
+        font-size: 6em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .cuerpo {
+                float: left;
+                clear: both;
+                display: block;
+                width: 100%;
+                height: 100%;
+    }
+
+    .cuerpo > ul {
+        background-color: gray;
+        margin-top: 1em;
+        width: 960px;
+    }
+    
+    .cuerpo > ul > li   {
+        width: 30%;
+        height: 30%;
+        display: inline-block;
+        padding: 0.9em;
+        text-align: justify;        
+    }
+    
+    .cuerpo > ul > li > h4 {
+        display: inline-block;
+        text-align: center;
+        background-color: #003C00;
+        width: 100%;
+        height: 2em;
+    }
+    
+    .cuerpo > ul > li > img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .rrss {
+        display: block;        
+        width: 960px;
+        text-align: center;
+    }
+    
+    .rrss > ul > li {
+        display: block;
+        float: left;
+        background-color: gray;
+        margin-top: 1em;
+        width: 20%;
+    }
+
+    .rrss > ul > li > img {
+        height: 2.5em;
+        
+        vertical-align: middle;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+@media handheld {
+
+    body {background-color: blue;}
+}
