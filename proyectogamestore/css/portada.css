@@ -12,7 +12,7 @@
 
     main    {
            margin: 0 auto;
-           width: 950px;
+           width: 960px;
            font-family: "zekton";
     }
 
@@ -186,70 +186,72 @@
         width: 960px;
         background-color: gray;
         margin-top: 1em;
+        margin-bottom: 1em;
         width: 14.286%;
     }
 
     .rrss > ul > li > div {
         height: 1.17em;
     }
-    
+
     .rrss > ul > li > div.xbox {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em 0.03em;
     }
 
     .rrss > ul > li > div.steam {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em -4.62em;
     }
 
     .rrss > ul > li > div.reddit {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em -3.46em;
     }
 
     .rrss > ul > li > div.google {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em -5.77em;
     }
 
     .rrss > ul > li > div.twitter {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em -2.3em;
     }
 
     .rrss > ul > li > div.facebook {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em -6.9em;
     }
 
     .rrss > ul > li > div.youtube {
         background-image: url('../img/icons/iconos.svg');
-        background-repeat: no-repeat;
         background-position: 3.5em -1.131em;
     }
-    
+
     section.condiciones {
-        display: block;
-        width: 960px;
+        display: inline-block;
+        width: 101%;
     }
-    
+
     section.condiciones > ul > li {
         text-align: center;
         float: left;
-        width: 30%;
+        width: 33%;
+        height: 1.2em;
+        background-color: gray;
     }
 
-    resto {
-        display: block;
-        clear: both;
+    section.condiciones > ul > li img {
+        height: 1em;
+        padding: 0.1em;
+    }
+
+    section#copyright {
+        display: inline-block;
+        width: 100%;  
         text-align: center;
+        padding-top: 0.2em;
     }
 }
 
