@@ -80,11 +80,13 @@
         margin-top: 0.2em;
     }
 
-    li.menu_buscar > img {
+    
+    
+    li.menu_buscar > div > img {
         width: 0.7em;
-        position: relative;
-        left: -1.1em;
-        top: 0.1em;
+        position: absolute;
+        left: 6.7em;
+        top: 0.3em;
         cursor: pointer;
     }
 
@@ -109,9 +111,14 @@
         vertical-align: middle;
     }
 
-    li.menu_buscar > input {
+    li.menu_buscar > div > input {
         border-radius: 0.4em;
         width: 100%;
+    }
+
+    li.menu_buscar > div {
+        width: 100%;
+        position: relative;
     }
 
     .autopromo  {
