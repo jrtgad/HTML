@@ -67,14 +67,7 @@
             .login > .boton {
                     width: 50%;
                     float: left;
-                    height: 2em;
-                    background-color: #76b900;
-                    color: #003c00;
-                    border-color: #003c00;
-                    margin-top: 10px;
-                    font-family: "zekton";
-                    font-size: 1em;
-                    border-radius: 0.4em;
+                    
             }
 
             .login > .boton + .boton {
@@ -89,6 +82,7 @@
         background-color: @verdeOscuro;
         font-size: 1.5em;
         border-radius: 0.2em;
+        margin-bottom: 1em;
         ul > li  {
             float: left;
             width: 18%;
@@ -119,15 +113,6 @@
         }
     }
 
-    .autopromo  {
-            margin-top: 1em;
-            height: 20em;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-    }
-
     h1  {
         font-size: 6em;
         margin-left: 1em;
@@ -135,8 +120,20 @@
     }
 
     .cuerpo {
-        float: left;
-        ul {
+        position: relative;
+        display: block;
+        clear: both;
+        .autopromo  {
+                margin-top: 1em;
+                height: 20em;
+                display: block;
+                clear: both;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+        }
+        .categorias {
             background-color: gray;
             margin-top: 1em;
             li {
@@ -149,6 +146,65 @@
                 width: 100%;
             }
         }
+        .error {
+            background-color: black;
+            img {
+                display: inline;
+                clear: both;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .registro{
+            display: block;
+            clear: both;
+            background-color: @verdeOscuro;
+            text-align: center;
+            form {
+                display: block;
+                clear: both;
+                .izq {
+                    width: 39.5%;
+                    position: relative;
+                    display: inline-block;
+                    font-size: 1em;
+                    float: left;
+                    line-height: 1.5em;
+                    ul {
+                        background-color: @verdeOscuro;
+                        text-align: right;
+                        height: 2em;
+                    }
+                }
+                .dcha {
+                    width: 59.5%;
+                    position: relative;
+                    display: inline-block;
+                    float: right;
+                    position: relative;
+                    text-align: left;
+                    input {
+                    text-align: left;
+                    }
+                }
+                .resto {
+                    display: block;
+                    clear: both;
+                    text-align: center;
+                    margin-top: 1em;
+                }        
+            }
+        }
+    }
+
+    .boton {
+        height: 2em;
+        background-color: @verdeClaro;
+        color: @verdeOscuro;
+        border-color: @verdeOscuro;
+        font-family: "zekton";
+        font-size: 1em;
+        border-radius: 0.4em;
     }
 
     h4 {
@@ -158,43 +214,49 @@
         padding-top: 0.5em;
     }
 
-    .rrss > ul > li {
-        float: left;
-        background-color: gray;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        width: 14.286%;
-        div {
-            height: 1.17em;
-            background-image: url('../img/icons/iconos.svg');
-        }
+    .rrss { 
+        display: block;
+        clear: both;
+        ul {
+            li {
+                float: left;
+                background-color: gray;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                width: 14.286%;
+                div {
+                    height: 1.17em;
+                    background-image: url('../img/icons/iconos.svg');
+                }
 
-        .xbox {
-            background-position: 3.5em 0.03em;
-        }
+                .xbox {
+                    background-position: 3.5em 0.03em;
+                }
 
-        .steam {
-            background-position: 3.5em -4.62em;
-        }
+                .steam {
+                    background-position: 3.5em -4.62em;
+                }
 
-        .reddit {
-            background-position: 3.5em -3.46em;
-        }
+                .reddit {
+                    background-position: 3.5em -3.46em;
+                }
 
-        .google {
-            background-position: 3.5em -5.77em;
-        }
+                .google {
+                    background-position: 3.5em -5.77em;
+                }
 
-        .twitter {
-            background-position: 3.5em -2.3em;
-        }
+                .twitter {
+                    background-position: 3.5em -2.3em;
+                }
 
-        .facebook {
-            background-position: 3.5em -6.9em;
-        }
+                .facebook {
+                    background-position: 3.5em -6.9em;
+                }
 
-        .youtube {
-            background-position: 3.5em -1.131em;
+                .youtube {
+                    background-position: 3.5em -1.131em;
+                }
+            }
         }
     }
 

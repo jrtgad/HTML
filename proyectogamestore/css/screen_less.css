@@ -55,14 +55,6 @@
   .cabecera .login > .boton {
     width: 50%;
     float: left;
-    height: 2em;
-    background-color: #76b900;
-    color: #003c00;
-    border-color: #003c00;
-    margin-top: 10px;
-    font-family: "zekton";
-    font-size: 1em;
-    border-radius: 0.4em;
   }
   .cabecera .login > .boton + .boton {
     margin-top: 0.2em;
@@ -74,6 +66,7 @@
     background-color: #003C00;
     font-size: 1.5em;
     border-radius: 0.2em;
+    margin-bottom: 1em;
   }
   nav.menu ul > li {
     float: left;
@@ -100,34 +93,95 @@
     top: 0.3em;
     cursor: pointer;
   }
-  .autopromo {
-    margin-top: 1em;
-    height: 20em;
-  }
-  .autopromo img {
-    width: 100%;
-    height: 100%;
-  }
   h1 {
     font-size: 6em;
     margin-left: 1em;
     margin-right: 1em;
   }
   .cuerpo {
-    float: left;
+    position: relative;
+    display: block;
+    clear: both;
   }
-  .cuerpo ul {
+  .cuerpo .autopromo {
+    margin-top: 1em;
+    height: 20em;
+    display: block;
+    clear: both;
+  }
+  .cuerpo .autopromo img {
+    width: 100%;
+    height: 100%;
+  }
+  .cuerpo .categorias {
     background-color: gray;
     margin-top: 1em;
   }
-  .cuerpo ul li {
+  .cuerpo .categorias li {
     width: 30%;
     height: 30%;
     display: inline-block;
     padding: 0.9em;
   }
-  .cuerpo ul img {
+  .cuerpo .categorias img {
     width: 100%;
+  }
+  .cuerpo .error {
+    background-color: black;
+  }
+  .cuerpo .error img {
+    display: inline;
+    clear: both;
+    width: 100%;
+    height: 100%;
+  }
+  .cuerpo .registro {
+    display: block;
+    clear: both;
+    background-color: #003C00;
+    text-align: center;
+  }
+  .cuerpo .registro form {
+    display: block;
+    clear: both;
+  }
+  .cuerpo .registro form .izq {
+    width: 39.5%;
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    float: left;
+    line-height: 1.5em;
+  }
+  .cuerpo .registro form .izq ul {
+    background-color: #003C00;
+    text-align: right;
+    height: 2em;
+  }
+  .cuerpo .registro form .dcha {
+    width: 59.5%;
+    display: inline-block;
+    float: right;
+    position: relative;
+    text-align: left;
+  }
+  .cuerpo .registro form .dcha input {
+    text-align: left;
+  }
+  .cuerpo .registro form .resto {
+    display: block;
+    clear: both;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .boton {
+    height: 2em;
+    background-color: #76b900;
+    color: #003C00;
+    border-color: #003C00;
+    font-family: "zekton";
+    font-size: 1em;
+    border-radius: 0.4em;
   }
   h4 {
     text-align: center;
@@ -135,36 +189,40 @@
     height: 2em;
     padding-top: 0.5em;
   }
-  .rrss > ul > li {
+  .rrss {
+    display: block;
+    clear: both;
+  }
+  .rrss ul li {
     float: left;
     background-color: gray;
     margin-top: 1em;
     margin-bottom: 1em;
     width: 14.286%;
   }
-  .rrss > ul > li div {
+  .rrss ul li div {
     height: 1.17em;
     background-image: url('../img/icons/iconos.svg');
   }
-  .rrss > ul > li .xbox {
+  .rrss ul li .xbox {
     background-position: 3.5em 0.03em;
   }
-  .rrss > ul > li .steam {
+  .rrss ul li .steam {
     background-position: 3.5em -4.62em;
   }
-  .rrss > ul > li .reddit {
+  .rrss ul li .reddit {
     background-position: 3.5em -3.46em;
   }
-  .rrss > ul > li .google {
+  .rrss ul li .google {
     background-position: 3.5em -5.77em;
   }
-  .rrss > ul > li .twitter {
+  .rrss ul li .twitter {
     background-position: 3.5em -2.3em;
   }
-  .rrss > ul > li .facebook {
+  .rrss ul li .facebook {
     background-position: 3.5em -6.9em;
   }
-  .rrss > ul > li .youtube {
+  .rrss ul li .youtube {
     background-position: 3.5em -1.131em;
   }
   .condiciones {

@@ -123,6 +123,7 @@
   }
   .cuerpo {
     float: left;
+    max-width: 960px;
   }
   .cuerpo ul {
     background-color: gray;

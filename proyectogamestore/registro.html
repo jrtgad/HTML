@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Recurso no encontrado</title>
+    <title>Registro de nuevo usuario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/Logo.png">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -49,8 +49,42 @@
         </nav>
 
         <section class="cuerpo">
-            <div class="error">
-                <img src="img/error.jpg">
+            <div class="registro">
+                <h1>NUEVO USUARIO</h1>
+                <form>
+                    <div class="izq">
+                        <ul>
+                            <li>Dirección de e-mail:</li>
+                            <li>Nombre de usuario:</li>
+                            <li>Contraseña:</li>
+                            <li>Repita la contraseña:</li>
+                            <li>Fecha de nacimiento:</li><br/>
+                            <li>
+                                <input type="checkbox" 
+                                    name="subscription"
+                                    value="Suscribirse al canal de noticias"
+                                    class="checkbox_reg">
+                            </li>
+                                
+                        </ul>
+                    </div>
+                    <div class="dcha">
+                        <ul>
+                            <li><input type="text" required="required"></li>
+                            <li><input type="text" required="required"></li>
+                            <li><input type="text" required="required"></li>
+                            <li><input type="text" required="required"></li>
+                            <li><input type="text" required="required"></li><br/>
+                            <li>Suscribirse al canal de noticias</li>
+                        </ul>
+                    </div><br/><br/>
+                    <div class="resto">
+                        <br/>
+                        <input type="reset" value="Limpiar" class="boton">
+                        <input type="submit" value="Registrarse" class="boton">
+                        <br/><br/>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -107,3 +141,4 @@
     </main>
 </body>
 </html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
