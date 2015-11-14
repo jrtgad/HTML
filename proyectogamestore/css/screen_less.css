@@ -22,7 +22,6 @@
     height: 115px;
     background: #003c00;
     background: linear-gradient(to right, #003c00 0%, #003c00 35%, #000000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003c00', endColorstr='#000000', GradientType=1);
     border-radius: 0.4em;
   }
   .cabecera .logo {
