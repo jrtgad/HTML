@@ -20,8 +20,8 @@
     margin-top: 1em;
     width: 960px;
     height: 115px;
-    background: #003c00;
     background: linear-gradient(to right, #003c00 0%, #003c00 35%, #000000 100%);
+    background: #003c00;
     border-radius: 0.4em;
   }
   .cabecera .logo {
@@ -42,9 +42,11 @@
   }
   .cabecera .login {
     float: right;
+    display: inline-block;
     position: relative;
     left: 3em;
     margin-top: 0.5em;
+    margin-top: -o-0 0.5em;
   }
   .cabecera .user_img {
     width: 5em;
@@ -139,6 +141,12 @@
     display: block;
     clear: both;
   }
+  .cuerpo .registro form ul {
+    background-color: #003C00;
+  }
+  .cuerpo .registro form ul li {
+    height: 2em;
+  }
   .cuerpo .registro form .izq {
     width: 39.5%;
     position: relative;
@@ -146,11 +154,7 @@
     font-size: 1em;
     float: left;
     line-height: 1.55em;
-  }
-  .cuerpo .registro form .izq ul {
-    background-color: #003C00;
     text-align: right;
-    height: 2em;
   }
   .cuerpo .registro form .dcha {
     width: 59.5%;
@@ -161,6 +165,7 @@
   }
   .cuerpo .registro form .dcha input {
     text-align: left;
+    height: -o-2em;
   }
   .cuerpo .registro form .resto {
     display: block;

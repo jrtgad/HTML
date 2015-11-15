@@ -39,6 +39,9 @@ ol, ul  {
 blockquote, q   {
                     quotes: none;
                 }
+input {
+    line-height: -o- 2em;
+}
 blockquote:before, blockquote:after,
 q:before, q:after   {
                         content: '';

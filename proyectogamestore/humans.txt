@@ -3,13 +3,21 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Fco. Javier Ruiz-Toledo
 
 # THANKS
 
-    <name>
+    David Villaluenga	Madrid, Spain
+    Sergio Asenjo 	Madrid, Spain
+    Joao Marco Ortiz	Madrid, Spain
+
+# SITE
+
+Last update: 2015/11/15
+Standards: HTML5, CSS3...
+Software: Sublime-text2, Mozilla Firefox, Adobe photoshop, Gimp
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Apache Server Configs, jQuery, Modernizr, Reset.css
