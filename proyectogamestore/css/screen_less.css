@@ -1,6 +1,6 @@
 @font-face {
   font-family: "zekton";
-  src: url('../Fuentes/Zekton/zekton.ttf');
+  src: url('../fonts/Zekton/zekton.ttf');
 }
 @media screen {
   body {
@@ -265,10 +265,5 @@
     color: #76b900;
     padding-top: 0.2em;
     cursor: default;
-  }
-}
-@media handheld {
-  body {
-    background-color: blue;
   }
 }
