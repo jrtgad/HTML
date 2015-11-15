@@ -3,21 +3,23 @@
 
 # TEAM
 
-    Fco. Javier Ruiz-Toledo
+    Fco. Javier Ruiz-Toledo Madrid, Spain
+    ---- Developer, The Helped One
 
 # THANKS
 
-    David Villaluenga	Madrid, Spain
-    Sergio Asenjo 	Madrid, Spain
-    Joao Marco Ortiz	Madrid, Spain
+    David Villaluenga Madrid, Spain
+    ---- The Mind
+
+    Sergio Asenjo Madrid, Spain
+    ---- Supporter, BrainStorming ideas
+
+    Joao Ortiz Madrid, Spain
+    ---- The Vision
 
 # SITE
 
 Last update: 2015/11/15
-Standards: HTML5, CSS3...
-Software: Sublime-text2, Mozilla Firefox, Adobe photoshop, Gimp
-
-# TECHNOLOGY COLOPHON
-
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Reset.css
+Language: Castellano
+Doctype:HTML5
+IDE: Sublime-text2, Mozilla Firefox, Adobe photoshop, Gimp
