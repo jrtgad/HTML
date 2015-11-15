@@ -5,5 +5,5 @@ User-agent: *
 Disallow: /img/
 Disallow: /less/
 Disallow: /bin/
-Disallow: /Fuentes/
+Disallow: /fonts/
 Crawl-delay: 60 
