@@ -79,6 +79,7 @@
   }
   nav.menu ul > li a {
     vertical-align: middle;
+    color: yellow;
   }
   nav.menu ul > li div {
     width: 100%;
@@ -131,6 +132,8 @@
     text-align: center;
     background-color: #003C00;
     height: 2em;
+    color: red;
+    font-size: 4em;
     padding-top: 0.5em;
     cursor: pointer;
   }
@@ -248,7 +251,7 @@
     float: left;
     width: 33%;
     height: 1.4em;
-    background-color: gray;
+    background-color: yellow;
   }
   .condiciones ul > li img {
     height: 1em;
@@ -258,7 +261,7 @@
   .condiciones ul > li span {
     text-align: center;
     cursor: pointer;
-    color: #003C00;
+    color: blue;
   }
   .copyright {
     text-align: center;
