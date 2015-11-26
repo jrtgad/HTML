@@ -1,0 +1,24 @@
+video {
+  display: inline-block;
+}
+#controles {
+  display: inline-block;
+}
+#controles img {
+  background-image: url('../img/controles.png');
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+#controles #play {
+  background-position: ;
+}
+#controles #pause {
+  background-position: -4.4em;
+}
+#controles #volup {
+  background-position: -8.6em;
+}
+#controles #voldown {
+  background-position: -12.8em;
+}
