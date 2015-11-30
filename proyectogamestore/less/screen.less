@@ -36,6 +36,27 @@
                 position: relative;
                 top: 0.2em;
                 left: 1em;
+                animation-name: giro;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                @keyframes giro {
+                    25% {
+                        transform:
+                        rotate(50deg);
+                    }
+                    50% {
+                        transform:
+                        rotate(140deg);
+                    }
+                    75% {
+                        transform:
+                        rotate(250deg);
+                    }
+                    100% {
+                        transform:
+                        rotate(360deg);
+                    }
+                }
             }
             .titulo {
                 padding-left: 0.75em;
@@ -66,8 +87,8 @@
             }
 
             .login > .boton {
-                    width: 50%;
-                    float: left;
+                width: 50%;
+                float: left;
 
             }
 
@@ -89,10 +110,10 @@
             width: 18%;
             margin-left: 0.5em;
             text-align: center;
-            padding-top: 0.2em;            
+            padding-top: 0.2em;
             a {
                 vertical-align: middle;
-                color: yellow;
+                color: @verdeClaro;
             }
             div {
                 width: 100%;
@@ -146,8 +167,7 @@
                     text-align: center;
                     background-color: @verdeOscuro;
                     height: 2em;
-                    color: red;
-                    font-size: 4em;
+                    color: @verdeClaro;
                     padding-top: 0.5em;
                     cursor: pointer;
                 }
@@ -282,7 +302,7 @@
             float: left;
             width: 33%;
             height: 1.4em;
-            background-color: yellow;            
+            background-color: gray;
             img {
                 height: 1em;
                 padding: 0.1em;
@@ -291,7 +311,7 @@
             span {
                 text-align: center;
                 cursor: pointer;
-                color: blue;
+                color: @verdeOscuro;
             }
         }
     }

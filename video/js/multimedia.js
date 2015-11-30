@@ -1,5 +1,10 @@
 function playVideo() {
+    /*if ($("video").paused) {*/
     $("video").play();
+    /*} else {
+        $("video").pause();
+    }*/
+
 }
 
 function pauseVideo() {
