@@ -1,28 +1,39 @@
-function $(id) {
-	return document.getElementById(id);
-}
-
-window.onload = active;
-
-function active () {
-	$("play").addEventListener("click", playVideo, false);
-	$("pause").addEventListener("click", pauseVideo, false);
-	$("volup").addEventListener("click", volUpVideo, false);
-	$("voldown").addEventListener("click", volDownVideo, false);	
-}
-
 function playVideo() {
-	$("video").play();
+    /*if ($("video").paused) {*/
+    $("video").play();
+    /*} else {
+        $("video").pause();
+    }*/
+
 }
 
 function pauseVideo() {
-	$("video").pause();
+    $("video").pause();
 }
 
 function volUpVideo() {
-	$("video").play();
+    $("video").volume += 0.1;
 }
 
 function volDownVideo() {
-	$("video").play();
+    $("video").volume -= 0.1;
 }
+
+function $(id) {
+    return document.getElementById(id);
+}
+
+function updateProgressBar() {
+    var percent = Math.floor((100 / video.duration) * video.currentTime);
+    $("bar").value = percent;
+}
+
+function active() {
+    $("play").addEventListener("click", playVideo, false);
+    $("pause").addEventListener("click", pauseVideo, false);
+    $("volup").addEventListener("click", volUpVideo, false);
+    $("voldown").addEventListener("click", volDownVideo, false);
+    $("video").addEventListener("timeupdate", updateProgressBar, false);
+}
+
+window.onload = active;

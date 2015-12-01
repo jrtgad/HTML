@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +8,18 @@
 	<script src="js/multimedia.js"></script>
 </head>
 <body>
-	<div>
-		<video autobuffer="true" loop="true" id="video">
-			<source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/MP4">
+		<video autobuffer="true" id="video">
+			<source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
 			<source src="video/small.ogv" type="video/ogg">
 			<source src="video/small.webm" type="video/webm">
 			Su reproductor no soporta los formatos de video
 		</video>
-		<div id="controles"> 
+		<progress min="0" max="100" value="0" id="bar"></progress>
+		<div id="controles">
 			<img id="play">
 			<img id="pause">
 			<img id="volup">
 			<img id="voldown">
 		</div>
-	</div>
 </body>
 </html>
