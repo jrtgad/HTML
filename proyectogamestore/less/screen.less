@@ -1,5 +1,53 @@
 @verdeOscuro: #003C00;
 @verdeClaro: #76b900;
+.animacionGiro() {
+    animation-name: giro;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    @keyframes giro {
+        12.5% {
+            transform: scale(0.9, 0.9) rotate(45deg);
+        }
+        25% {
+            transform: scale(0.8, 0.8) rotate(90deg);
+        }
+        37.5% {
+            transform: scale(0.9, 0.9) rotate(135deg);
+        }
+        50% {
+            transform: scale(1, 1) rotate(180deg);
+        }
+        62.5% {
+            transform: scale(0.9, 0.9) rotate(225deg);
+        }
+        75% {
+            transform: scale(0.8, 0.8) rotate(270deg);
+        }
+        87.5% {
+            transform: scale(0.9, 0.9) rotate(315deg);
+        }
+        100% {
+            transform: scale(1, 1) rotate(360deg);
+        }
+    }
+}
+
+.animacionColor(@direction) {
+    animation-name: color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: @direction;
+    
+    @keyframes color {
+        0% {color: @verdeClaro;}
+        100% {color: white;}
+        //100% {color: @verdeClaro;}
+    }
+}
+
 
 @font-face {
     font-family: "zekton";
@@ -36,38 +84,23 @@
                 position: relative;
                 top: 0.2em;
                 left: 1em;
-                animation-name: giro;
-                animation-duration: 4s;
-                animation-iteration-count: infinite;
-                @keyframes giro {
-                    25% {
-                        transform:
-                        rotate(50deg);
-                    }
-                    50% {
-                        transform:
-                        rotate(140deg);
-                    }
-                    75% {
-                        transform:
-                        rotate(250deg);
-                    }
-                    100% {
-                        transform:
-                        rotate(360deg);
-                    }
-                }
+                .animacionGiro;
+                
             }
             .titulo {
                 padding-left: 0.75em;
                 font-size: 5.8em;
                 font-weight: bold;
                 display: inline-block;
+                .animacionColor(alternate);
+                
             }
 
             .titulo2 {
                 font-size: 5.8em;
                 color: white;
+                .animacionColor(alternate-reverse);
+
             }
 
             .login  {

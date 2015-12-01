@@ -7,6 +7,7 @@
         content="Servicio de venta de videojuegos">
     <meta name="keywords" content="juegos pc">
     <meta name="autor" content="Javier Ruiz-Toledo Gallego">
+    <script src="js/prefix_free.js"></script>
     <!-- Place favicon.ico in the root directory -->
     <link rel="icon" href="img/Logo.png">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -56,7 +57,26 @@
 
         <section class="cuerpo">
             <section class="autopromo" id="autopromo">
-                <img src="img/Fotos/autopromo/nba16.jpg" height="353" alt="Autopromoción">
+<!--Meter el video y luego la imagen-->
+                <section id="cajaVideo">
+                    <video autobuffer="true" preload="true" id="video" poster="img/Logo.png">
+                        <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+                        <source src="video/small.ogv" type="video/ogg">
+                        <source src="video/small.webm" type="video/webm">
+                        Su reproductor no soporta los formatos de video
+                    </video>
+
+                    <progress min="0" max="100" value="0" id="bar"></progress>
+
+                    <section id="controles">
+                        <img id="play">
+                        <img id="pause">
+                        <img id="volup">
+                        <img id="voldown">
+                    </section>
+                </section>
+
+                <!--<img id="fotopromo" src="img/Fotos/autopromo/nba16.jpg" height="353" alt="Foto autopromoción">-->
             </section>
             <ul class="categorias">
                 <li id="acción">

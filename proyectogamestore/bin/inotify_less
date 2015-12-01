@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 while true
 do
 inotifywait -r -e MODIFY ..
 lessc ../less/screen.less > ../css/screen_less.css
 done
-=======
-while inotifywait -r -e MODIFY ./..;do
-lessc ../less/screen.less > ../css/screen_less.css;done;
-
->>>>>>> c7d066fe78625e7358845ed1e36894690309b7a7
