@@ -1,5 +1,5 @@
 while true
-do
+do 
 inotifywait -r -e MODIFY ..
-lessc ../less/screen.less > ../css/screen_less.css
+lessc ../less/screen.less > ../css/screen_less.css;
 done
