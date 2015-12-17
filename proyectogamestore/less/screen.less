@@ -179,14 +179,67 @@
         clear: both;
         .autopromo  {
             margin-top: 1em;
-            height: 20em;
+            height: 22em;
             display: block;
             clear: both;
+            background-color: @verdeOscuro;
             cursor: pointer;
             img {
                 width: 100%;
                 height: 100%;
             }
+            #cajaVideo {
+                width: 100%;
+                height: 100%;
+
+                video {
+                    display: inline;                    
+                    text-align: center;
+                    height: 80%;
+                }
+
+                #bar {
+                    padding: 0.1em;
+                }
+
+                #controles {
+                    display: block;
+                    text-align: center;
+
+                    img {
+                        background-image: url('../img/icons/controles.png');
+                        height: 40px;
+                        width: 50px;
+                        display: inline-block;
+                        border-radius: 8px;
+                        padding-bottom: 0.3em;
+                    }
+
+                    #play {
+                        background-position: 0;
+                    }
+
+                    #pause {
+                        background-position: -4.30em;
+                    }
+
+                    #volup {
+                        background-position: -8.6em;
+                    }
+
+                    #voldown {
+                        background-position: -12.95em;
+                    }
+                }
+
+                progress {
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 300px;
+                }
+            }
+            
         }
         .categorias {
             background-color: gray;

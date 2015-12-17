@@ -165,14 +165,57 @@
   }
   .cuerpo .autopromo {
     margin-top: 1em;
-    height: 20em;
+    height: 22em;
     display: block;
     clear: both;
+    background-color: #003C00;
     cursor: pointer;
   }
   .cuerpo .autopromo img {
     width: 100%;
     height: 100%;
+  }
+  .cuerpo .autopromo #cajaVideo {
+    width: 100%;
+    height: 100%;
+  }
+  .cuerpo .autopromo #cajaVideo video {
+    display: inline;
+    text-align: center;
+    height: 80%;
+  }
+  .cuerpo .autopromo #cajaVideo #bar {
+    padding: 0.1em;
+  }
+  .cuerpo .autopromo #cajaVideo #controles {
+    display: block;
+    text-align: center;
+  }
+  .cuerpo .autopromo #cajaVideo #controles img {
+    background-image: url('../img/icons/controles.png');
+    height: 40px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 8px;
+    padding-bottom: 0.3em;
+  }
+  .cuerpo .autopromo #cajaVideo #controles #play {
+    background-position: 0;
+  }
+  .cuerpo .autopromo #cajaVideo #controles #pause {
+    background-position: -4.3em;
+  }
+  .cuerpo .autopromo #cajaVideo #controles #volup {
+    background-position: -8.6em;
+  }
+  .cuerpo .autopromo #cajaVideo #controles #voldown {
+    background-position: -12.95em;
+  }
+  .cuerpo .autopromo #cajaVideo progress {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
   }
   .cuerpo .categorias {
     background-color: gray;

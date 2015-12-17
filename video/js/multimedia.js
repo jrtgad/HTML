@@ -34,6 +34,13 @@ function active() {
     $("volup").addEventListener("click", volUpVideo, false);
     $("voldown").addEventListener("click", volDownVideo, false);
     $("video").addEventListener("timeupdate", updateProgressBar, false);
+    $("bar").addEventListener("change", changeCurrentTime, false);
 }
+
+function changeCurrentTime() {
+    var momentum = $("video").duration * ($("bar").value / 100);
+    $("video").currentTime = momentum;
+}
+
 
 window.onload = active;
