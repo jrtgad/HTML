@@ -1,0 +1,45 @@
+.reset {
+	margin : 0;
+	padding: 0;
+}
+
+.menu {
+	display: inline-block;
+	background-color: #D8E26D;
+	border: 1px solid #8C9104;
+}
+
+.completeWith {
+	width: 100%;
+}
+
+.buttonWidth {
+	text-align: center;
+	width: 20%;
+}
+
+.noMargin {
+	margin: 0 auto;
+}
+
+.centered {
+	text-align: center;
+}
+
+.imgSize {
+	width: 100%;
+	height: 100%;
+}
+
+.articlePosition {
+	display: inline-block;
+	width: 19%;	
+}
+
+.transparent {
+	opacity: 0.5;
+}
+
+.opaque {
+	opacity: 1;
+}
