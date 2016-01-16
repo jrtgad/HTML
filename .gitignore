@@ -1,4 +1,6 @@
 /*/apuntes.txt
 /*/enlacesayuda.txt
 .git/*
-.git/objects
+*.pdf
+*/node_modules
+*/karma.conf.js

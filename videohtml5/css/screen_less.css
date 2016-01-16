@@ -2,15 +2,16 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
-body video {
+body div {
   position: relative;
   width: 40%;
-  height: 300px;
   display: inline;
   float: left;
-  border: 1 solid black;
 }
-body video img {
+body div video {
+  width: 80%;
+}
+body div img {
   width: 75px;
   height: 60px;
   position: absolute;
@@ -18,9 +19,7 @@ body video img {
   left: 0;
 }
 body canvas {
-  width: 40%;
-  height: 300px;
   display: inline;
   float: left;
-  border: 1 solid black;
+  border: 1px solid black;
 }
