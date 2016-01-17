@@ -4,25 +4,50 @@
 	cursor: default;
 }
 
+.body {
+	width: 960px;
+    margin: 0 auto;
+    background: Cornsilk;
+}
+
 .menu {
 	display: inline-block;
 	background-color: Gold;
-	border: 1px solid olive;
-	vertical-align: middle;
 	text-align: center;
 }
 
-.margin {
+.border {
+	border: 1px solid olive;
+}
+
+.button {
+	width: 14.4em;
+	height: 1.4em;
+}
+
+.marginTop {
 	margin-top: 1em;
+}
+
+.marginBottom {
+	margin-bottom: 0.5em;
+}
+
+.yellowBackground {
+	background-color: yellow;
+}
+
+.articleHeight {
+	height: 250px;
 }
 
 .completeWith {
 	width: 100%;
 }
 
-.buttonWidth {
-	text-align: center;
-	width: 24%;
+.bigHeight {
+	line-height: 2em;
+	vertical-align: middle;
 }
 
 .pointer {
@@ -33,23 +58,13 @@
 	margin: 0 auto;
 }
 
-.reset {
-	margin: 0 auto;
-	padding: 0;
-
-}
-
 .centered {
 	text-align: center;
+	margin: 0 auto;
 }
 
 .grayText {
 	color: #bfbfbf;
-}
-
-figure img[alt]{
-	content: "Embarcación " counter(embarcacion) " de 5";
-	counter-increment: embarcacion;
 }
 
 .completeWidth {
@@ -77,8 +92,6 @@ figure img[alt]{
 	display: none;
 }
 
-
-
 .bigFont {
 	font-size: 2em;
 }
@@ -102,4 +115,8 @@ figure img[alt]{
 .decorationNone {
 	text-decoration: none;
 	list-style-type: none;
+}
+
+.silverBackground {
+	background-color: silver;
 }
