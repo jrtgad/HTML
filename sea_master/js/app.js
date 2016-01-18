@@ -2,26 +2,24 @@ $(document).ready(function () {
     var menuElements = $("nav ul li"),
         data = "data-setup";
 
-
-
-
-
     /** Añadir clases sin más */
     $("*").addClass("reset");
 
-    $("body").addClass("body");
+    $("body").addClass("body marginBottom");
 
     $("nav").addClass("completeWidth centered marginTop");
 
-    $("h2").addClass("centered grayText");
+    $("h2").addClass("centered orangeText");
 
-    $("figcaption").addClass("centered grayText hidden");
+    $("h1").addClass("centered capitalize bigFont orangeText");
 
-    $("form").addClass("centered silverBackground bigFont").children().addClass("bigHeight");
+    $("figcaption").addClass("centered orangeText hidden bold");
+
+    $("form").addClass("centered orangeBackground bigFont").children().addClass("bigHeight blueText");
 
     $("img").addClass("imgSize");
 
-    $("section:last").addClass("azulClaro centered");
+    $("section:last").addClass("azulOscuro centered");
 
     $("section:first").addClass("marginTop");
 
@@ -31,10 +29,11 @@ $(document).ready(function () {
 
     $("article").addClass("articleHeight");
 
+    $("article h2").addClass("hidden");
+
     $("section").addClass("completeWidth");
 
     $("section:last").addClass("centered");
-
 
     $("section:first").addClass("azulOscuro");
 
@@ -80,14 +79,16 @@ $(document).ready(function () {
 
         $(this).hover(function (x) {
             $(figcaption).toggleClass("hidden");
+            $(article).children("h2").toggleClass('hidden');
         }, function () {
             $(figcaption).toggleClass("hidden");
+            $(article).children("h2").toggleClass('hidden');
         });
     })
 
 
     /** Crear span muestra de precio por metros */
-    $("form").append($("<span></span>").addClass("hidden block"));
+    $("form").append($("<span></span>").addClass("hidden block noDisplay")).children("span").addClass("blueText");
 
     /** Añadir validación span precio por metros */
     $("input").on("keyup", $("form"), function () {
@@ -96,14 +97,11 @@ $(document).ready(function () {
             $("span").text("");
         } else {
             if (pattern.test($(this).val()) && !isNaN($(this).val())) {
-                $("span").text("Initial price: " + $("input").val() * 12345 + " €").removeClass("hidden");
+                $("span").text("Initial price: " + $("input").val() * 12345 + " €").removeClass("hidden noDisplay");
             } else {
                 $("span").text("0");
+                $("span").addClass("hidden noDisplay");
             }
-        }
-    }).on('blur', function () {
-        if ($("span").text() === "0") {
-            $("span").addClass("hidden");
         }
     });
 
@@ -119,12 +117,14 @@ $(document).ready(function () {
 
     $("section:last").append("<script src=\"http://vjs.zencdn.net/5.4.6/video.js\"></script>");
 
+
+
     /** Centrar lista de footer y quitar primer caracter(") de cada texto */
-    $("footer ul").addClass("menu centered decorationNone").css({
+    $("footer ul").addClass("menu centered decorationNone orangeBackground").css({
         width: "100%",
         margin: "0 auto"
     }).children().each(function () {
         $(this).text($(this).text().substr(1, $(this).text().length - 1));
+        $(this).addClass("blueText");
     }).addClass("capitalize").css("border", "none");
-
 });

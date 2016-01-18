@@ -12,8 +12,7 @@
 
 .menu {
 	display: inline-block;
-	background-color: Gold;
-	text-align: center;
+	background-color: #507afe;
 }
 
 .border {
@@ -23,6 +22,8 @@
 .button {
 	width: 14.4em;
 	height: 1.4em;
+	color: goldenrod;
+	vertical-align: bottom;
 }
 
 .marginTop {
@@ -35,6 +36,22 @@
 
 .yellowBackground {
 	background-color: yellow;
+}
+
+.orangeBackground {
+	background: goldenrod;
+}
+
+.blueText {
+	color: #507afe;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.textStroke {
+	text-stroke: 1px solid brown;
 }
 
 .articleHeight {
@@ -50,6 +67,10 @@
 	vertical-align: middle;
 }
 
+.redText {
+	color: red;
+}
+
 .pointer {
 	cursor: pointer;
 }
@@ -63,8 +84,8 @@
 	margin: 0 auto;
 }
 
-.grayText {
-	color: #bfbfbf;
+.orangeText {
+	color: goldenrod;
 }
 
 .completeWidth {
@@ -89,6 +110,9 @@
 
 .hidden {
 	visibility: hidden;
+}
+
+.noDisplay {
 	display: none;
 }
 
