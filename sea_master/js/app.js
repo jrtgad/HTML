@@ -1,13 +1,19 @@
 $(document).ready(function () {
     var menuElements = $("nav ul li"),
-        data = "data-setup";
+        data = "data-setup",
+        ns = function (ns) {
+            ns.nombreEmbarcacion = function (index, itemLength, text) {
+                return "Embarcación " + index + " de " + itemLength + "(" + text + ")"; 
+            };
+            return ns;
+        }({});
 
     /** Añadir clases sin más */
     $("*").addClass("reset");
 
     $("body").addClass("body marginBottom");
 
-    $("nav").addClass("completeWidth centered marginTop");
+    $("nav").addClass("completeWidth centered marginTop navHeight");
 
     $("h2").addClass("centered orangeText");
 
@@ -53,15 +59,16 @@ $(document).ready(function () {
             $(this).after($(this).animate({
                 width: "14.4em",
                 height: "1.4em"
-            }, 150));
+            }, 200));
         });
     });;
 
 
     /** Añadir alt a cada imagen de embarcación y cambiar fondo al hacer click */
-    $("img").each(function (x) {
-        var element = "img:eq(" + x + ")";
-        $(element).attr("alt", "Embarcación " + (x + 1) + " de " + $("img").length + "(" + $(this).parent().prev().text() + ")");
+    $("img").each(function (index) {
+        var element = "img:eq(" + index + ")";
+        //sacar a funcion
+        $(element).attr("alt", ns.nombreEmbarcacion(index, $("img").length, $(this).parent().prev().text()));
     }).addClass('pointer').on("click", function () {
         $("img").parent().parent().removeClass("yellowBackground");
         $(this).parent().parent().addClass("yellowBackground");
@@ -69,15 +76,15 @@ $(document).ready(function () {
 
 
     /** Añadir precio a nombre de la embarcación y mostrarlo con hover */
-    $("section ul li article").each(function (x) {
-        var article = "section ul li article:eq(" + x + ")",
-            figcaption = "section ul li article figure figcaption:eq(" + x + ")";
+    $("section ul li article").each(function (index) {
+        var article = "section ul li article:eq(" + index + ")",
+            figcaption = "section ul li article figure figcaption:eq(" + index + ")";
 
-        $(figcaption).each(function (y) {
-            $(figcaption).text($(figcaption).text() + ": " + $(article).data("price") + " €");
+        $(figcaption).each(function () {
+            $(figcaption).text($(article).data("price") + " €");
         });
 
-        $(this).hover(function (x) {
+        $(this).hover(function () {
             $(figcaption).toggleClass("hidden");
             $(article).children("h2").toggleClass('hidden');
         }, function () {
@@ -120,11 +127,13 @@ $(document).ready(function () {
 
 
     /** Centrar lista de footer y quitar primer caracter(") de cada texto */
-    $("footer ul").addClass("menu centered decorationNone orangeBackground").css({
-        width: "100%",
-        margin: "0 auto"
-    }).children().each(function () {
+    $("footer ul").attr({
+        itemscope: "",
+        itemtype: "https://schema.org/Corporation"
+    }).addClass("menu centered decorationNone orangeBackground noMargin completeWidth").children().each(function () {
         $(this).text($(this).text().substr(1, $(this).text().length - 1));
-        $(this).addClass("blueText");
-    }).addClass("capitalize").css("border", "none");
+        $(this).addClass("blueText").append("<span></span>");
+    }).addClass("capitalize noBorder");
 });
+
+// copyrightHolder 

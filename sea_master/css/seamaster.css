@@ -11,12 +11,17 @@
 }
 
 .menu {
+	position: relative;
 	display: inline-block;
 	background-color: #507afe;
 }
 
 .border {
 	border: 1px solid olive;
+}
+
+.noBorder {
+	border: none;
 }
 
 .button {
@@ -38,12 +43,12 @@
 	background-color: yellow;
 }
 
-.orangeBackground {
-	background: goldenrod;
+.redLetters {
+	color: red;
 }
 
-.blueText {
-	color: #507afe;
+.orangeBackground {
+	background: goldenrod;
 }
 
 .bold {
@@ -52,6 +57,10 @@
 
 .textStroke {
 	text-stroke: 1px solid brown;
+}
+
+.navHeight {
+	height: 3em;
 }
 
 .articleHeight {
@@ -65,10 +74,6 @@
 .bigHeight {
 	line-height: 2em;
 	vertical-align: middle;
-}
-
-.redText {
-	color: red;
 }
 
 .pointer {
@@ -86,6 +91,10 @@
 
 .orangeText {
 	color: goldenrod;
+}
+
+.blueText {
+	color: #507afe;
 }
 
 .completeWidth {
@@ -139,8 +148,4 @@
 .decorationNone {
 	text-decoration: none;
 	list-style-type: none;
-}
-
-.silverBackground {
-	background-color: silver;
 }
