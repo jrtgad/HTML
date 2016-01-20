@@ -2,8 +2,20 @@ $(document).ready(function () {
     var menuElements = $("nav ul li"),
         data = "data-setup",
         ns = function (ns) {
-            ns.nombreEmbarcacion = function (index, itemLength, text) {
-                return "Embarcación " + index + " de " + itemLength + "(" + text + ")"; 
+            ns.shipName = function (index, itemLength, text) {
+                return "Embarcación " + (index + 1) + " de " + itemLength + "(" + text + ")";
+            };
+            ns.removeFirstLetter = function (element) {
+                return element.text().substr(1, element.text().length - 1);
+            };
+            /*ns.changeBackground = function (clickedElement, tag) {
+                tag.parent().parent().removeClass("orangeBackground").children('h2').removeClass('blueText').next().children('figcaption').removeClass('blueText');
+                clickedElement.parent().parent().addClass("orangeBackground").children('h2').addClass('blueText').next().children('figcaption').addClass('blueText');
+            };*/
+            ns.appendMicrodata = function (element, tag, attribute, value) {
+                $("<" + tag + ">" + value + "</" + tag + ">").appendTo(element).attr({
+                    itemprop: attribute
+                }).addClass("block centered");
             };
             return ns;
         }({});
@@ -29,7 +41,7 @@ $(document).ready(function () {
 
     $("section:first").addClass("marginTop");
 
-    $("section h1").addClass("centered capitalize bigFont");
+    $("section h1").addClass("centered capitalize bigFont padding");
 
     $("section ul").addClass("centered");
 
@@ -54,7 +66,7 @@ $(document).ready(function () {
     }).click(function () {
         $(this).animate({
             width: "10em",
-            height: "3em"
+            height: "2.5em"
         }, 200, "linear", function () {
             $(this).after($(this).animate({
                 width: "14.4em",
@@ -67,22 +79,19 @@ $(document).ready(function () {
     /** Añadir alt a cada imagen de embarcación y cambiar fondo al hacer click */
     $("img").each(function (index) {
         var element = "img:eq(" + index + ")";
-        //sacar a funcion
-        $(element).attr("alt", ns.nombreEmbarcacion(index, $("img").length, $(this).parent().prev().text()));
-    }).addClass('pointer').on("click", function () {
-        $("img").parent().parent().removeClass("yellowBackground");
-        $(this).parent().parent().addClass("yellowBackground");
-    });
 
+        $(element).attr("alt", ns.shipName(index, $("img").length, $(this).parent().prev().text()));
+    }).addClass('pointer').on("click", function () {
+        $("img").parent().parent().removeClass("orangeBackground").children('h2').removeClass('blueText').next().children('figcaption').removeClass('blueText');
+        $(this).parent().parent().addClass("orangeBackground").children('h2').addClass('blueText').next().children('figcaption').addClass('blueText');
+    });
 
     /** Añadir precio a nombre de la embarcación y mostrarlo con hover */
     $("section ul li article").each(function (index) {
-        var article = "section ul li article:eq(" + index + ")",
-            figcaption = "section ul li article figure figcaption:eq(" + index + ")";
+        var article = "article:eq(" + index + ")",
+            figcaption = "figcaption:eq(" + index + ")";
 
-        $(figcaption).each(function () {
-            $(figcaption).text($(article).data("price") + " €");
-        });
+        $(figcaption).text($(article).data("price") + " €");
 
         $(this).hover(function () {
             $(figcaption).toggleClass("hidden");
@@ -95,22 +104,22 @@ $(document).ready(function () {
 
 
     /** Crear span muestra de precio por metros */
-    $("form").append($("<span></span>").addClass("hidden block noDisplay")).children("span").addClass("blueText");
+    $("form").append($("<span></span>").addClass("hidden block noDisplay blueText"));
 
     /** Añadir validación span precio por metros */
     $("input").on("keyup", $("form"), function () {
         var pattern = /[0-9]+/;
         if (isNaN($(this).val())) {
-            $("span").text("");
+            $("form span").text("");
         } else {
             if (pattern.test($(this).val()) && !isNaN($(this).val())) {
-                $("span").text("Initial price: " + $("input").val() * 12345 + " €").removeClass("hidden noDisplay");
+                $("form span").text("Initial price: " + $("input").val() * 12345 + " €").removeClass("hidden noDisplay");
             } else {
-                $("span").text("0");
-                $("span").addClass("hidden noDisplay");
+                $("form span").text("0");
+                $("form span").addClass("hidden noDisplay");
             }
         }
-    });
+    }).addClass('blueBorder centered cursorText');
 
     /** Framework video */
     $("head").append("<link href=\"http://vjs.zencdn.net/5.4.6/video-js.css\" rel=\"stylesheet\">");
@@ -120,9 +129,10 @@ $(document).ready(function () {
     $("video").attr({
         id: "my-video",
         preload: "auto"
-    }).addClass("video-js vjs-default-skin centered").attr("data-setup", "{}");
+    }).addClass("video-js vjs-default-skin centered padding").attr("data-setup", "{}");
 
-    $("section:last").append("<script src=\"http://vjs.zencdn.net/5.4.6/video.js\"></script>");
+    $("section:last").append("<script src=\"http://vjs.zencdn.net/5.4.6/video.js\"></script>").addClass("paddingBottom");
+
 
 
 
@@ -131,9 +141,34 @@ $(document).ready(function () {
         itemscope: "",
         itemtype: "https://schema.org/Corporation"
     }).addClass("menu centered decorationNone orangeBackground noMargin completeWidth").children().each(function () {
-        $(this).text($(this).text().substr(1, $(this).text().length - 1));
-        $(this).addClass("blueText").append("<span></span>");
-    }).addClass("capitalize noBorder");
-});
+        $(this).text(ns.removeFirstLetter($(this))).contents().wrap("<h3></h3>");
+    }).addClass("capitalize noBorder footer blueText smallFont");
 
-// copyrightHolder 
+    $("footer li+li h3").text("Author").addClass('title').last().remove();
+
+    ns.appendMicrodata($("footer li:first"), "span", "name", "SeaMaster S.L.");
+
+    $("footer li:first").append("<div></div>").next().next().remove();
+    $("footer li div").attr({
+        itemscope: '',
+        itemtype: 'https://schema.org/PostalAddress'
+    });
+
+    ns.appendMicrodata($("footer li:first div"), "span", "streetAddress", "Av. del Almte. Julio Guillén Tato, 33");
+    ns.appendMicrodata($("footer li:first div"), "span", "postalCode", "03080");
+    ns.appendMicrodata($("footer li:first div"), "span", "addressLocality", "Alicante, Spain");
+
+    $("footer div span[itemprop=postalCode").addClass("hidden noDisplay");
+    $("footer ul li:first div span:last").text($("footer div span:eq(1)").text() + " " + $("footer div span:last").text());
+
+    ns.appendMicrodata($("footer li:first"), "span", "telephone", "(+34) 695 84 22 41");
+    ns.appendMicrodata($("footer li:first"), "span", "email", "admin@seamaster.com");
+
+    $("footer li:last").attr({
+        itemscope: '',
+        itemtype: 'https://schema.org/Person'
+    })
+    ns.appendMicrodata($("footer li:last"), "span", "name", "Fco. Javier Ruiz-Toledo Gallego");
+    ns.appendMicrodata($("footer li:last"), "span", "telephone", "(+34) 91 653 54 88");
+    ns.appendMicrodata($("footer li:last"), "span", "email", "jruiztoledog@gmail.com");
+});
