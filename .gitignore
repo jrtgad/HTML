@@ -4,3 +4,4 @@
 *.pdf
 */node_modules
 */karma.conf.js
+*/js
