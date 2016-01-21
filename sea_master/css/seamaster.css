@@ -44,12 +44,20 @@
 	margin-bottom: 0.5em;
 }
 
+.marginRight {
+	margin-right: 0.2em;
+}
+
 .padding {
 	padding: 0.5em;
 }
 
 .paddingBottom {
 	padding-bottom: 0.5em;
+}
+
+.paddingRight {
+	padding-right: 0.5em;
 }
 
 .yellowBackground {
@@ -62,10 +70,6 @@
 
 .bold {
 	font-weight: bold;
-}
-
-.textStroke {
-	text-stroke: 1px solid brown;
 }
 
 .navHeight {
@@ -142,11 +146,11 @@
 	text-transform: capitalize;
 }
 
-.azulClaro {
+.lightBlue {
 	background-color: #05a4ee;
 }
 
-.azulOscuro {
+.darkBlue {
 	background-color: #507afe;
 }
 
