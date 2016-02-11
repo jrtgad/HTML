@@ -8,7 +8,7 @@
     <meta name="keywords" content="juegos pc">
     <meta name="autor" content="Javier Ruiz-Toledo Gallego">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="js/prefix_free.js"></script>
     <!-- Place favicon.ico in the root directory -->
     <link rel="icon" href="img/Logo.png">
@@ -20,25 +20,31 @@
 </head>
 
 <body>
-    <main class="container col-md-12">
-        <header class="cabecera container col-md-12">
-            <a href="index.html" class="col-md-3">
+    <main class="container col-md-12 col-xs-12">
+        <header class="cabecera container col-md-12 col-md-12">
+            <a href="index.html" class="container col-md-1 col-md-offset-1 col-xs-5">
                 <figure class="logo">
                     <img src="img/Logo.png" alt="Logo empresa">
                 </figure>
             </a>
-            <a href="index.html" class="col-md-3 titulo">Game</a>
-            <a href="index.html" class "col-md-3 titulo2">Store</a>
-            <section class="login col-md-3">
-                <!--<img src="img/icons/user.png" alt="Imagen user" class="user_img">-->
-                <input type="button" class="boton" value="Iniciar sesión">
-                <input type="button" class="boton" value="Registrarse">
+            <div class="col-md-4 container col-md-offset-1 col-xs-5">
+                <a href="index.html" class="h1 titulo">Game</a>
+                <a href="index.html" class="h1 titulo2">Store</a>
+            </div>
+            <section class="login col-md-3 col-md-offset-2">
+                <img src="img/icons/user.png" alt="Imagen user" class="user_img col-md-2">
+                <div class="container col-md-1">
+                    <input type="button" class="boton" value="Iniciar sesión">
+                    <input type="button" class="boton" value="Registrarse">
+                </div>
             </section>
         </header>
-        <nav class="container row navbar col-md-12">
-            <ul class="navbar container col-md-12">
-                <li class="menu_categoria dropdown container col-md-2" id="menu_categoria">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Categorías</a>
+        <nav class="menu container navbar col-md-12 col-md-12">
+            <ul class="navbar container col-md-12 col-md-12 col-md-offset-1">
+                <li class="menu_categoria dropdown container col-md-2 h2" id="menu_categoria">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Categorías
+                    </a>
                     <ul class="dropdown-menu" aria-labelledby="menu_categoria">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -47,81 +53,95 @@
                         <li><a href="#">Separated link</a></li>
                     </ul>
                 </li>
-                <li class="menu_promociones container col-md-2">
-                    <a href="#">Promociones</a>
+                <li class="menu_promociones container h2 col-md-2">
+                    <a href="#" class="">Promociones</a>
                 </li>
-                <li class="menu_reservas container col-md-2">
-                    <a href="#">Reservas</a>
+                <li class="menu_reservas container h2 col-md-2">
+                    <a href="#" class="col-md-1">Reservas</a>
                 </li>
-                <li class="menu_ofertas container col-md-2">
-                    <a href="#">Ofertas</a>
+                <li class="menu_ofertas container h2 col-md-2">
+                    <a href="#" class="col-md-1">Ofertas</a>
                 </li>
-                <li class="menu_buscar container col-md-4">
-                    <div class="search_input col-md-4">
-                        <input type="text">
-                        <!--<img src="img/icons/search.png" alt="Lupa">-->
-                    </div>
+                <li class="menu_buscar container h2 col-md-2">
+                    <input type="search" class="col-md-2">
+                    <img src="img/icons/search.png" alt="Lupa">
                 </li>
-            </ul>
-            <ul class="submenu_categoria">
             </ul>
         </nav>
-        <section class="cuerpo container col-md-12">
-            <section class="presentacion container col-md-12" id="presentacion">
-                <section class="ofertas" id=""="ofertas">
-                    <span class="col-md-2">Ofertas</span>
-                    <ul class="col-md-12">
-                        <li class="box container col-md-3">
-                            <img src="img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac">
-                            <h4>The Binding of Isaac</h4>
-                            <div class="precio">8.95€</div>
-                        </li>
-                        <li class="box container col-md-3">
-                            <img src="img/Fotos/Deportes/fifa16.jpg" alt="FIFA 16">
-                            <h4>FIFA 16</h4>
-                            <div class="precio">24.50€</div>
-                        </li>
-                        <li class="box container col-md-3">
-                            <img src="img/Fotos/Aventuras/monkeyisland.jpg" alt="Monkey Island">
-                            <h4>Monkey Island</h4>
-                            <div class="precio">3.40€</div>
-                        </li>
-                        <li class="box container col-md-3">
-                            <img src="img/Fotos/Estrategia/starcraft2.jpg" alt="Starcraft 2">
-                            <h4>Starcraft 2</h4>
-                            <div class="precio">12.99€</div>
-                        </li>
-                    </ul>
+        <section class="cuerpo container col-md-12 col-md-12">
+            <section class="presentacion container col-md-12 col-md-12" id="presentacion">
+                <section class="ofertas container col-md-12 col-md-12" id=" "="ofertas">
+                    <span class="col-md-12 col-md-12">Ofertas</span>
+                    <div class="containter col-md-12 col-md-12">
+                        <ul class="container col-md-12 col-md-12">
+                            <li class="box container col-md-2 col-xs-12">
+                                <img src="img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac">
+                                <h4>The Binding of Isaac</h4>
+                                <div class="precio">8.95€</div>
+                                <div class="categoria">Rogue-Like</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                            <li class="box container col-md-2">
+                                <img src="img/Fotos/Deportes/fifa16.jpg" alt="FIFA 16">
+                                <h4>FIFA 16</h4>
+                                <div class="categoria">Deportes</div>
+                                <div class="so">Microsoft</div>
+                                <div class="precio">24.50€</div>
+                            </li>
+                            <li class="box container col-md-2">
+                                <img src="img/Fotos/Aventuras/monkeyisland.jpg" alt="Monkey Island">
+                                <h4>Monkey Island</h4>
+                                <div class="precio">3.40€</div>
+                                <div class="categoria">Aventuras</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                            <li class="box container col-md-2">
+                                <img src="img/Fotos/Estrategia/starcraft2.jpg" alt="Starcraft 2">
+                                <h4>Starcraft 2</h4>
+                                <div class="precio">12.99€</div>
+                                <div class="categoria">Estrategia</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
-                <section class="novedades container col-md-12" id=""="ofertas">
-                    <span>Novedades</span>
-                    <ul class="container col-md-12">
-                        <li class="box container col-md-3">
+                <section class="novedades container col-md-12 col-md-12" id=" "="ofertas">
+                    <span class="col-md-12 col-md-12">Novedades</span>
+                    <ul class="container col-md-12 col-md-12 col-xs-12">
+                        <li class="box container col-md-2">
                             <img src="img/Fotos/Rol/fallout4.jpg" alt="Fallout 4">
                             <h4>Fallout 4</h4>
                             <div class="precio">45.50€</div>
+                            <div class="categoria">Rol</div>
+                            <div class="so">Microsoft</div>
                         </li>
-                        <li class="box container col-md-3">
+                        <li class="box container col-md-2">
                             <img src="img/Fotos/Accion/GTA.jpg" alt="Gran Theft Auto 5">
                             <h4>Gran Theft Auto 5</h4>
                             <div class="precio">52.10€</div>
+                            <div class="categoria">Acción</div>
+                            <div class="so">Microsoft</div>
                         </li>
-                        <li class="box container col-md-3">
+                        <li class="box container col-md-2">
                             <img src="img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3">
                             <h4>Dirt 3</h4>
                             <div class="precio">35.95€</div>
+                            <div class="categoria">Carreras</div>
+                            <div class="so">Microsoft</div>
                         </li>
-                        <li class="box container col-md-3">
+                        <li class="box container col-md-2">
                             <img src="img/Fotos/Simuladores/cities.jpg" alt="Cities Skylines">
                             <h4>Cities Skylines</h4>
                             <div class="precio">28.30€</div>
+                            <div class="categoria">Simuladores</div>
+                            <div class="so">Microsoft</div>
                         </li>
                     </ul>
                 </section>
             </section>
-            <section class="col-md-12 container">
-                <ul class="categorias col-md-12">
-                    <div class="col-md-12">
+            <section class="col-md-12 col-md-12 container">
+                <ul class="categorias col-md-12 col-md-12">
+                    <div class="col-md-12 col-md-12">
                         <li id="acción" class="col-md-4">
                             <h4>Acción</h4>
                             <img src="img/Fotos/Accion/GTA.jpg" alt="GTA V">
@@ -135,7 +155,7 @@
                             <img src="img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3">
                         </li>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-md-12">
                         <li id="deportes" class="col-md-4">
                             <h4>Deportes</h4>
                             <img src="img/Fotos/Deportes/fifa16.jpg" alt="Fifa 16">
@@ -149,7 +169,7 @@
                             <img src="img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac">
                         </li>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 col-md-12">
                         <li id="rol" class="col-md-4">
                             <h4>Rol</h4>
                             <img src="img/Fotos/Rol/fallout4.jpg" alt="Fallout 4">
@@ -166,53 +186,59 @@
                 </ul>
             </section>
         </section>
-        <footer class="container col-md-12">
-            <section class="rrss container col-md-12">
+        <footer class="container col-md-12 col-md-12">
+            <section class="rrss container col-md-12 col-md-12 col-md-offset-2">
                 <ul>
-                    <li>
-                        <div class="xbox container col-md-1 col-offset-1"></div>
+                    <li class="container col-md-1">
+                        <div class="xbox"></div>
                     </li>
-                    <li>
-                        <div class="steam container col-md-1"></div>
+                    <li class="container col-md-1">
+                        <div class="steam"></div>
                     </li>
-                    <li>
-                        <div class="reddit container col-md-1"></div>
+                    <li class="container col-md-1">
+                        <div class="reddit"></div>
                     </li>
-                    <li>
-                        <div class="google container col-md-1"></div>
+                    <li class="container col-md-1">
+                        <div class="google"></div>
                     </li>
-                    <li>
-                        <div class="twitter container col-md-1"></div>
+                    <li class="container col-md-1">
+                        <div class="twitter"></div>
                     </li>
-                    <li>
-                        <div class="facebook container col-md-1"></div>
+                    <li class="container col-md-1">
+                        <div class="facebook"></div>
                     </li>
-                    <li>
-                        <div class="youtube container col-md-1"></div>
+                    <li class="container col-md-1">
+                        <div class="youtube"></div>
                     </li>
                 </ul>
             </section>
-            <section class="condiciones container col-md-12">
-                <ul class="container col-md-12">
-                    <li class="container col-md-4"><span>Aviso legal</span></li>
-                    <li class="container col-md-4" class="container col-md-4"><span>Privacidad</span></li>
-                    <li class="container col-md-4"><span>Condiciones de venta</span></li>
-                    <li class="container col-md-4"><span>Contacto</span></li>
-                    <li class="container col-md-4"><span>Métodos de pago</span></li>
-                    <li class="container col-md-4"><span>Derechos de uso</span></li>
-                    <li class="container col-md-4"><span>Devoluciones</span></li>
-                    <li class="container col-md-4">
-                        <article class="tarjetas">
-                            <img src="img/pago/Paypal.png" alt="Paypal">
-                            <img src="img/pago/maestro.jpg" alt="Maestro">
-                            <img src="img/pago/MasterCard.png" alt="Mastercard">
-                            <img src="img/pago/visa.png" alt="Visa">
-                        </article>
-                    </li>
-                    <li><span>Sube tu juego</span></li>
+            <section class="condiciones container col-md-12 col-md-12 col-md-offset-2">
+                <ul class="container col-md-9 col-md-offset-1">
+                    <div class="col-md-9 text-center">
+                        <li class="container col-md-3"><span>Aviso legal</span></li>
+                        <li class="container col-md-3"><span>Privacidad</span></li>
+                        <li class="container col-md-3"><span>Condiciones de venta</span></li>
+                    </div>
+                    <div class="col-md-9 text-center">
+                        <li class="container col-md-3"><span>Contacto</span></li>
+                        <li class="container col-md-3"><span>Métodos de pago</span></li>
+                        <li class="container col-md-3"><span>Derechos de uso</span></li>
+                    </div>
+                    <div class="col-md-9 text-center">
+                        <li class="container col-md-3"><span>Devoluciones</span></li>
+                        <li class="container col-md-3">
+                            <article class="tarjetas">
+                                <img src="img/pago/Paypal.png" alt="Paypal">
+                                <img src="img/pago/maestro.jpg" alt="Maestro">
+                                <img src="img/pago/MasterCard.png" alt="Mastercard">
+                                <img src="img/pago/visa.png" alt="Visa">
+                            </article>
+                        </li>
+                        <li class="container col-md-3">Sube tu juego</li>
+                    </div>
                 </ul>
             </section>
-            <section class="copyright container col-md-12">
+            <!--<section class="copyright container col-md-12 col-md-12 col-md-offset-3">
                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
                     <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
                 </a>
@@ -226,7 +252,7 @@
                         Creative Commons Reconocimiento 4.0 Internacional License
                     </a>
                 <br /> Octubre 2015 GameStore S.L. Todos los derechos reservados
-            </section>
+            </section>-->
         </footer>
     </main>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
