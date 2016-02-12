@@ -49,7 +49,25 @@
     }
 }*/
 
-//MOVIL (xs en boot)
+
+/*//MOVIL (xs en boot)
+@media (min-width: 360px) {
+    .invisible {
+        display: none;
+        visibility: none;
+    }
+    #logo {
+        float: left;
+        display: inline-block;
+        text-align: left;
+    }
+    .name {
+        display: inline-block;
+        float: right;
+        text-align: right;
+    }
+}*/
+
 //TABLET (sm en boot)
 @media (min-width: 768px) {}
 
@@ -60,11 +78,17 @@
         vertical-align: middle;
         text-decoration: none;
         outline: none;
+        cursor: default;
     }
     a {
-        color: inherit;
-        text-decoration: none;
+        vertical-align: middle;
+        color: @verdeClaro;
         outline: none;
+        cursor: pointer;
+        &:active {
+            outline: none;
+            color: inherit;
+        }
         &:hover {
             color: inherit;
             text-decoration: none;
@@ -73,7 +97,7 @@
             color: inherit;
             text-decoration: none;
         }
-        &:not(focus) {
+        &:not(hover) {
             color: inherit;
             text-decoration: none;
         }
@@ -81,6 +105,18 @@
     @font-face {
         font-family: "zekton";
         src: url('../fonts/Zekton/zekton.ttf');
+    }
+    @keyframes press {
+        from {
+            border-color: @verdeOscuro;
+            background-color: @verdeClaro;
+            color: @verdeOscuro;
+        }
+        to {
+            border-color: @verdeClaro;
+            background-color: @verdeOscuro;
+            color: @verdeClaro;
+        }
     }
     body {
         background-color: #363636;
@@ -100,17 +136,15 @@
         border-radius: 0.4em;
         padding: 1em;
         .logo {
-            float: left;
             position: relative;
-            top: 0.2em;
-            left: 1em;
+            #logo {
+                cursor: pointer;
+            }
             //.animacionGiro;
         }
         .titulo {
-            //padding-left: 0.75em;
             font-size: 5.8em;
             font-weight: bold;
-            //display: inline-block;
             //.animacionColor(alternate);
             &:hover {
                 color: inherit;
@@ -131,45 +165,84 @@
             position: relative;
             input[type=button] {
                 width: 120px;
+                border: 2px solid @verdeOscuro;
+                &:hover {
+                    border: 2px solid @verdeClaro;
+                    color: @verdeClaro;
+                    background-color: @verdeOscuro;
+                    animation-name: press;
+                    animation-duration: 1s;
+                }
+                &:not(hover) {
+                    border: 2px solid @verdeOscuro;
+                    color: @verdeOscuro;
+                    background-color: @verdeClaro;
+                    animation-name: release;
+                    animation-duration: 1s;
+                }
             }
-            //float: right;
-            //margin-top: 0.5em;
-            //margin-right: 0;
-            //padding-left: 0;
         }
         .user_img {
             width: 7em;
         }
-        /*        .login > div > .boton {
-            width: 50%;
-            float: left;
+    }
+    @keyframes lighter {
+        from {
+            background-color: @verdeOscuro;
+            color: @verdeClaro;
         }
-        .login > div > .boton + .boton {
-            margin-top: 0.2em;
+        to {
+            background-color: @verdeClaro;
+            color: @verdeOscuro;
         }
-        */
+    }
+    @keyframes darker {
+        from {
+            background-color: @verdeClaro;
+            color: @verdeOscuro;
+        }
+        to {
+            background-color: @verdeOscuro;
+            color: @verdeClaro;
+        }
     }
     nav.menu {
-        float: left;
         position: relative;
-        //width: 960px;
-        //height: 1.8em;
         background-color: @verdeOscuro;
-        //font-size: 1.5em;
         border-radius: 0.2em;
-        //margin-bottom: 1em;
         a {
+            border-radius: 40px;
+            text-align: center;
             vertical-align: middle;
+            padding-top: 0.2em;
             color: @verdeClaro;
+            outline: none;
+            width: 250px;
             &:hover {
                 color: inherit;
+                text-decoration: none;
+                animation-name: lighter;
+                animation-duration: 1s;
+                background-color: @verdeClaro;
+                color: @verdeOscuro;
+            }
+            &:visited {
+                color: inherit;
+                text-decoration: none;
+            }
+            &:not(hover) {
+                animation-name: darker;
+                animation-duration: 1s;
                 text-decoration: none;
             }
         }
         input {
             border: solid 3px @verdeClaro;
             border-radius: 0.4em;
-            width: 250px;
+            margin-left: 5px;
+            width: 245px;
+            height: 1em;
+            cursor: text;
         }
         img {
             width: 0.67em;
@@ -180,11 +253,6 @@
             overflow: visible;
         }
     }
-    /*h1 {
-        font-size: 6em;
-        margin-left: 1em;
-        margin-right: 1em;
-    }*/
     .cuerpo {
         position: relative;
         display: block;
@@ -196,38 +264,62 @@
                 margin-bottom: 1em;
             }
             span {
-                font-size: 2em;
+                font-size: 3.2em;
                 padding: 10px;
             }
             .box {
-                display: inline-block;
-                position: relative;
-                width: 24%;
-                margin: 0 0 0.2em 0.2em;
+                width: 24.2%;
+                height: 13em;
+                margin: 0 0 0.4em 1em;
                 background-color: #002C00;
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
                 img {
-                    width: 240px;
+                    width: 58%;
                     margin: 0 auto;
-                    padding: 10px;
+                    padding: 2.5%;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 h4 {
                     text-align: center;
+                    font-size: 140%;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 div {
                     position: absolute;
-                    padding: 5px;
+                    padding: 1%;
                     background-color: @verdeOscuro;
+                    &:hover {
+                        cursor: pointer;
+                    }
                     &.precio {
-                        top: 10px;
-                        right: 10px;
+                        width: 15%;
+                        top: 6%;
+                        left: 340px;
+                    }
+                    &.descuento {
+                        width: 8%;
+                        top: 5.5%;
+                        left: 25.4%;
+                        background-color: @verdeClaro;
+                        color: @verdeOscuro;
+                        border: solid 1px @verdeOscuro;
                     }
                     &.so {
-                        top: 43px;
-                        right: 10px;
+                        top: 23%;
+                        width: 15%;
+                        left: 79.3%;
                     }
                     &.categoria {
-                        top: 10px;
-                        right: 330px;
+                        width: 20%;
+                        top: 6%;
+                        right: 77.5%;
                     }
                 }
             }
@@ -289,9 +381,11 @@
         .categorias {
             background-color: gray;
             padding-bottom: 1em;
+            padding-left: 8em;
             li {
-                width: 33%;
-                display: inline-block;
+                &:hover {
+                    opacity: 0.5;
+                }
                 h4 {
                     text-align: center;
                     background-color: @verdeOscuro;
@@ -300,11 +394,14 @@
                     color: @verdeClaro;
                     padding-top: 0.5em;
                     cursor: pointer;
+                    &.noMargin {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
                 }
                 img {
-                    margin: 0 auto;
                     cursor: pointer;
-                    width: 100%;
+                    width: 318.25px;
                 }
             }
         }
@@ -377,16 +474,10 @@
         cursor: pointer;
     }
     .rrss {
-        //display: block;
-        //clear: both;
-        //position: relative;
         ul {
             li {
                 float: left;
                 background-color: gray;
-                //margin-top: 1em;
-                //margin-bottom: 1em;
-                //width: 14.286%;
                 div {
                     height: 1.4em;
                     text-align: center;
@@ -417,11 +508,10 @@
         }
     }
     .condiciones {
-        width: 101%;
-        ul > li {
+        position: relative;
+        left: -3%;
+        ul li {
             text-align: center;
-            float: left;
-            width: 33%;
             height: 1.4em;
             background-color: gray;
             img {
@@ -431,8 +521,10 @@
             }
             span {
                 text-align: center;
-                cursor: pointer;
                 color: @verdeOscuro;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }

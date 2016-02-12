@@ -20,32 +20,32 @@
 </head>
 
 <body>
-    <main class="container col-md-12 col-xs-12">
-        <header class="cabecera container col-md-12 col-md-12">
-            <a href="index.html" class="container col-md-1 col-md-offset-1 col-xs-5">
+    <main class="container col-md-12 col-xs-6">
+        <header class="cabecera container col-md-12 col-xs-6">
+            <a href="index.html" class="container col-md-1 col-md-offset-1 col-xs-3">
                 <figure class="logo">
-                    <img src="img/Logo.png" alt="Logo empresa">
+                    <img src="img/Logo.png" id="logo" alt="Logo empresa">
                 </figure>
             </a>
-            <div class="col-md-4 container col-md-offset-1 col-xs-5">
+            <div class="col-md-4 container col-md-offset-2 col-xs-3 name">
                 <a href="index.html" class="h1 titulo">Game</a>
                 <a href="index.html" class="h1 titulo2">Store</a>
             </div>
-            <section class="login col-md-3 col-md-offset-2">
-                <img src="img/icons/user.png" alt="Imagen user" class="user_img col-md-2">
+            <section class="login col-md-3 col-md-offset-1 ">
+                <img src="img/icons/user.png" alt="Imagen user" class="user_img col-md-2 ">
                 <div class="container col-md-1">
                     <input type="button" class="boton" value="Iniciar sesión">
                     <input type="button" class="boton" value="Registrarse">
                 </div>
             </section>
         </header>
-        <nav class="menu container navbar col-md-12 col-md-12">
-            <ul class="navbar container col-md-12 col-md-12 col-md-offset-1">
-                <li class="menu_categoria dropdown container col-md-2 h2" id="menu_categoria">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <nav class="menu container navbar col-md-12 col-sm-6 ">
+            <ul class="navbar container col-md-10 col-md-offset-2 col-sm-6">
+                <li class="menu_categoria dropdown container col-md-2 h2 col-sm-2">
+                    <a href="#" class="dropdown-toggle col-md-1" type="button" data-toggle="dropdown" aria-haspopup="true" id="dropdownMenu1" aria-expanded="true" id="menu_categoria">
                         Categorías
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="menu_categoria">
+                    <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
@@ -53,142 +53,149 @@
                         <li><a href="#">Separated link</a></li>
                     </ul>
                 </li>
-                <li class="menu_promociones container h2 col-md-2">
-                    <a href="#" class="">Promociones</a>
+                <li class="menu_promociones container h2 col-md-2 col-sm-">
+                    <a href="#" class="col-md-1">Promociones</a>
                 </li>
-                <li class="menu_reservas container h2 col-md-2">
+                <li class="menu_reservas container h2 col-md-2 col-sm-">
                     <a href="#" class="col-md-1">Reservas</a>
                 </li>
-                <li class="menu_ofertas container h2 col-md-2">
+                <li class="menu_ofertas container h2 col-md-2 col-sm-">
                     <a href="#" class="col-md-1">Ofertas</a>
                 </li>
-                <li class="menu_buscar container h2 col-md-2">
-                    <input type="search" class="col-md-2">
+                <li class="menu_buscar container h2 col-md-2 col-sm-">
+                    <input type="search">
                     <img src="img/icons/search.png" alt="Lupa">
+                    <!--<i class="gliphycon gliphycon-search" alt="Lupa">-->
                 </li>
             </ul>
         </nav>
         <section class="cuerpo container col-md-12 col-md-12">
-            <section class="presentacion container col-md-12 col-md-12" id="presentacion">
-                <section class="ofertas container col-md-12 col-md-12" id=" "="ofertas">
-                    <span class="col-md-12 col-md-12">Ofertas</span>
-                    <div class="containter col-md-12 col-md-12">
-                        <ul class="container col-md-12 col-md-12">
-                            <li class="box container col-md-2 col-xs-12">
+            <section class="presentacion " id="presentacion">
+                <section class="ofertas container col-md-12" id=" "="ofertas">
+                    <span class="col-md-12">Ofertas</span>
+                    <div class="container col-md-12">
+                        <ul class="col-md-12 container">
+                            <li class="box col-md-2 col-xs-12">
                                 <img src="img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac">
                                 <h4>The Binding of Isaac</h4>
                                 <div class="precio">8.95€</div>
+                                <div class="descuento">8%</div>
                                 <div class="categoria">Rogue-Like</div>
                                 <div class="so">Microsoft</div>
                             </li>
-                            <li class="box container col-md-2">
+                            <li class="box col-md-2">
                                 <img src="img/Fotos/Deportes/fifa16.jpg" alt="FIFA 16">
                                 <h4>FIFA 16</h4>
                                 <div class="categoria">Deportes</div>
                                 <div class="so">Microsoft</div>
                                 <div class="precio">24.50€</div>
+                                <div class="descuento">15%</div>
                             </li>
-                            <li class="box container col-md-2">
+                            <li class="box col-md-2">
                                 <img src="img/Fotos/Aventuras/monkeyisland.jpg" alt="Monkey Island">
                                 <h4>Monkey Island</h4>
                                 <div class="precio">3.40€</div>
                                 <div class="categoria">Aventuras</div>
                                 <div class="so">Microsoft</div>
+                                <div class="descuento">50%</div>
                             </li>
-                            <li class="box container col-md-2">
+                            <li class="box col-md-2">
                                 <img src="img/Fotos/Estrategia/starcraft2.jpg" alt="Starcraft 2">
                                 <h4>Starcraft 2</h4>
                                 <div class="precio">12.99€</div>
                                 <div class="categoria">Estrategia</div>
                                 <div class="so">Microsoft</div>
+                                <div class="descuento">10%</div>
                             </li>
                         </ul>
                     </div>
                 </section>
-                <section class="novedades container col-md-12 col-md-12" id=" "="ofertas">
-                    <span class="col-md-12 col-md-12">Novedades</span>
-                    <ul class="container col-md-12 col-md-12 col-xs-12">
-                        <li class="box container col-md-2">
-                            <img src="img/Fotos/Rol/fallout4.jpg" alt="Fallout 4">
-                            <h4>Fallout 4</h4>
-                            <div class="precio">45.50€</div>
-                            <div class="categoria">Rol</div>
-                            <div class="so">Microsoft</div>
-                        </li>
-                        <li class="box container col-md-2">
-                            <img src="img/Fotos/Accion/GTA.jpg" alt="Gran Theft Auto 5">
-                            <h4>Gran Theft Auto 5</h4>
-                            <div class="precio">52.10€</div>
-                            <div class="categoria">Acción</div>
-                            <div class="so">Microsoft</div>
-                        </li>
-                        <li class="box container col-md-2">
-                            <img src="img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3">
-                            <h4>Dirt 3</h4>
-                            <div class="precio">35.95€</div>
-                            <div class="categoria">Carreras</div>
-                            <div class="so">Microsoft</div>
-                        </li>
-                        <li class="box container col-md-2">
-                            <img src="img/Fotos/Simuladores/cities.jpg" alt="Cities Skylines">
-                            <h4>Cities Skylines</h4>
-                            <div class="precio">28.30€</div>
-                            <div class="categoria">Simuladores</div>
-                            <div class="so">Microsoft</div>
-                        </li>
-                    </ul>
+                <section class="novedades container col-md-12 " id=" "="ofertas">
+                    <span class="col-md-12">Novedades</span>
+                    <div class="container col-md-12">
+                        <ul class="container col-md-12 col-xs-12">
+                            <li class="box col-md-2">
+                                <img src="img/Fotos/Rol/fallout4.jpg" alt="Fallout 4">
+                                <h4>Fallout 4</h4>
+                                <div class="precio">45.50€</div>
+                                <div class="categoria">Rol</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                            <li class="box col-md-2">
+                                <img src="img/Fotos/Accion/GTA.jpg" alt="Gran Theft Auto 5">
+                                <h4>Gran Theft Auto 5</h4>
+                                <div class="precio">52.10€</div>
+                                <div class="categoria">Acción</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                            <li class="box col-md-2">
+                                <img src="img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3">
+                                <h4>Dirt 3</h4>
+                                <div class="precio">35.95€</div>
+                                <div class="categoria">Carreras</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                            <li class="box col-md-2">
+                                <img src="img/Fotos/Simuladores/cities.jpg" alt="Cities Skylines">
+                                <h4>Cities Skylines</h4>
+                                <div class="precio">28.30€</div>
+                                <div class="categoria">Simuladores</div>
+                                <div class="so">Microsoft</div>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
             </section>
-            <section class="col-md-12 col-md-12 container">
-                <ul class="categorias col-md-12 col-md-12">
-                    <div class="col-md-12 col-md-12">
-                        <li id="acción" class="col-md-4">
-                            <h4>Acción</h4>
+            <section class="">
+                <ul class="categorias col-md-10 container col-md-offset-1 ">
+                    <div class="col-md-12">
+                        <li id="acción" class="col-md-3 col-md-offset-1">
+                            <h4 class="noMargin">Acción</h4>
                             <img src="img/Fotos/Accion/GTA.jpg" alt="GTA V">
                         </li>
-                        <li id="aventura" class="col-md-4">
-                            <h4>Aventura</h4>
+                        <li id="aventura" class="col-md-3">
+                            <h4 class="noMargin">Aventura</h4>
                             <img src="img/Fotos/Aventuras/monkeyisland.jpg" alt="Monkey Island">
                         </li>
-                        <li id="carreras" class="col-md-4">
-                            <h4>Carreras</h4>
+                        <li id="carreras" class="col-md-3">
+                            <h4 class="noMargin">Carreras</h4>
                             <img src="img/Fotos/Carreras/dirt3.jpg" alt="Dirt 3">
                         </li>
                     </div>
-                    <div class="col-md-12 col-md-12">
-                        <li id="deportes" class="col-md-4">
-                            <h4>Deportes</h4>
+                    <div class="col-md-12">
+                        <li id="deportes" class="col-md-3 col-md-offset-1">
+                            <h4 class="noMargin">Deportes</h4>
                             <img src="img/Fotos/Deportes/fifa16.jpg" alt="Fifa 16">
                         </li>
-                        <li id="estrategia" class="col-md-4">
-                            <h4>Estrategia</h4>
+                        <li id="estrategia" class="col-md-3">
+                            <h4 class="noMargin">Estrategia</h4>
                             <img src="img/Fotos/Estrategia/starcraft2.jpg" alt="Starcraft 2">
                         </li>
-                        <li id="rogue-like" class="col-md-4">
-                            <h4>Rogue-Like</h4>
+                        <li id="rogue-like" class="col-md-3">
+                            <h4 class="noMargin">Rogue-Like</h4>
                             <img src="img/Fotos/Rogue-Like/tboi.png" alt="The Binding of Isaac">
                         </li>
                     </div>
-                    <div class="col-md-12 col-md-12">
-                        <li id="rol" class="col-md-4">
-                            <h4>Rol</h4>
+                    <div class="col-md-12">
+                        <li id="rol" class="col-md-3 col-md-offset-1">
+                            <h4 class="noMargin">Rol</h4>
                             <img src="img/Fotos/Rol/fallout4.jpg" alt="Fallout 4">
                         </li>
-                        <li id="simuladores" class="col-md-4">
-                            <h4>Simuladores</h4>
+                        <li id="simuladores" class="col-md-3">
+                            <h4 class="noMargin">Simuladores</h4>
                             <img src="img/Fotos/Simuladores/cities.jpg" alt="Cities Skyline">
                         </li>
-                        <li id="terror" class="col-md-4">
-                            <h4>Terror</h4>
+                        <li id="terror" class="col-md-3">
+                            <h4 class="noMargin">Terror</h4>
                             <img src="img/Fotos/Terror/Deadspace3.png" alt="Dead Space 3">
                         </li>
                     </div>
                 </ul>
             </section>
         </section>
-        <footer class="container col-md-12 col-md-12">
-            <section class="rrss container col-md-12 col-md-12 col-md-offset-2">
-                <ul>
+        <footer class="container col-md-12">
+            <section class="rrss col-md-12 container col-md-offset-3">
+                <ul class="container col-md-12">
                     <li class="container col-md-1">
                         <div class="xbox"></div>
                     </li>
@@ -198,9 +205,9 @@
                     <li class="container col-md-1">
                         <div class="reddit"></div>
                     </li>
-                    <li class="container col-md-1">
+                    <!--<li class="container col-md-1">
                         <div class="google"></div>
-                    </li>
+                    </li>-->
                     <li class="container col-md-1">
                         <div class="twitter"></div>
                     </li>
@@ -212,8 +219,8 @@
                     </li>
                 </ul>
             </section>
-            <section class="condiciones container col-md-12 col-md-12 col-md-offset-2">
-                <ul class="container col-md-9 col-md-offset-1">
+            <section class="condiciones col-md-12">
+                <ul class="container col-md-12 col-md-offset-3">
                     <div class="col-md-9 text-center">
                         <li class="container col-md-3"><span>Aviso legal</span></li>
                         <li class="container col-md-3"><span>Privacidad</span></li>
